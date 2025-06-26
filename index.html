@@ -83,7 +83,7 @@
         #hijo_text{
             margin: 20px;
             font-size: 3vw;
-            width: 40%;
+            max-width: 600px;
             margin-top: 20px;
         }
         #hijo_text h6{
@@ -454,6 +454,44 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #father {
+                flex-direction: column;
+                padding: 20px;
+                text-align: center;
+            }
+
+            #hijo_text {
+                font-size: 24px;
+                width: 100%;
+                margin: 0;
+            }
+
+            #hijo_text h1 {
+                font-size: 28px;
+            }
+
+            #hijo_text h6 {
+                font-size: 18px;
+            }
+
+            #hijo_img {
+                padding: 30px;
+                margin: 0 auto;
+            }
+
+            #hijo_img img {
+                width: 80%;
+                height: auto;
+                margin: 0 auto;
+            }
+
+            #Unirme {
+                font-size: 20px;
+                padding: 10px 20px;
             }
         }
     </style>
