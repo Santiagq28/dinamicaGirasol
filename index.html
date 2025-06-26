@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinámicas Girasol</title>
+    <link rel="shortcut icon" href="img/logogirasol.png" type="image/x-icon">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color:white;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 100vw;
+            max-height: 100vh;
+            display: grid;
+            
+        }
+        #cabecera{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100vw;
+            padding: 20px;
+            margin: 0px;
+            border-bottom: 1px solid #b1b0b0;
+            background-color: white;
+            height: 30px;
+            left: 0;
+            top: 0;
+            
+        }
+        #logo{
+            display: flex;
+        }
+        #logo_lazye{
+            width: 40px;
+            height: 40px;
+        }
+        #nombre_logo{
+            display: block;
+            font-weight: 750;
+            font-size: 20px;
+            margin-top: 5px;
+            padding-left: 5px ;
+        }
+        #nav{
+            margin-right: 50px;
+        }
+
+        #nav ul{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            padding-right: 20px;
+            padding-left: 150px;
+        }
+        #nav ul li{
+            display: inline-block;
+            line-height: 20px;
+        }
+        #nav ul li a {
+            display: block;
+            padding: 0 15px;
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+            margin-top: 3px;
+            font-weight: 600;
+        }
+        #nav ul li a:hover{
+            color:orange;
+            transition-duration: 300ms
+        }
+
+        
+
+        
+        #father{
+            display: flex;
+            place-items:center;
+            align-items: center;
+            justify-content: center;
+        }
+        #hijo_text{
+            margin: 20px;
+            font-size: 40px;
+            width: 550px;
+            margin-top: 20px;
+        }
+        #hijo_text h6{
+            margin-top: 20px;
+            font-size: 30px;
+            font-weight: 400;
+        }
+        #hijo_img{
+            background-color: #fff7008b;
+            padding-top: 90px;
+            padding-right: 150px;
+            padding-bottom: 50px;
+            border-bottom-left-radius: 50%;
+            border-bottom-right-radius: 50%;
+            border-top-left-radius: 40%;
+            margin-left: 25px;
+            
+            
+        }
+        #hijo_img img{
+            width: 500px;
+            height: 380px;
+            transform: rotate(-8deg);
+            border-radius: 10px;
+            
+        }
+
+        #boton_unirme{
+            display: flex;
+            justify-content: center;
+        }
+
+        #Unirme{
+            text-decoration: none;
+            background-color: orange;
+            font-size: 50px;
+            font-weight: 700;
+            padding: 2px 25px;
+            border-radius: 5px;
+            color: white;
+        }
+        #Unirme:hover{
+            transition-duration: 700ms;
+            background-color: white;
+            color: orange;
+            border: orange 2px solid;
+        }
+
+
+
+
+        #first{
+            display: grid;
+            place-items:center;
+            align-items: center;
+            justify-content:center;
+            margin-top: 250px;
+            
+        }
+        #first h1{
+            font-size: 40px;
+            margin-bottom: 40px;
+        }
+        #second{
+            display: flex;
+        }
+        #second1{
+            margin-top: 50px;
+            margin-left: 50px;
+            width: 600px;
+            font-size: 18px;
+            
+        }
+        #second ul{
+            list-style: none;
+        }
+        #second1 li{
+            margin-top: 40px;
+        }
+        #second1 li p{
+            margin-top: 15px;
+        }
+        #second2 img{
+            width: 325px;
+            height: 600px;
+            margin-left: 150px;
+            border-radius: 30px;
+        }
+
+
+        #primary{
+            display: flex;
+            margin-top: 250px;
+            background-color: orange;
+            place-items:center;
+            align-items: center;
+            justify-content:center;
+        }
+        #secundary1{
+            width: 500px;
+            font-size: 30px;
+        }
+        #secundary1 h2{
+            margin-top: 70px;
+            margin-bottom: 20px;
+        }
+        #secundary1 p{
+            font-size: 18px;
+            font-weight: 500;
+        }
+        #secundary1 img{
+            width: 30px;
+            height: 30px;
+            margin-top: 10px;
+            border-radius: 10px;
+        }
+        #consigue{
+            margin-top: 40px;
+        }
+        #img2{
+            width: 200px;
+            height: 320px;
+            margin-left: 70px;
+            border-bottom-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+            margin-bottom: 100px;
+        }
+        #img1{
+            width: 200px;
+            height: 320px;
+            margin-top: 100px;
+            margin-left: 50px;
+            border-top-right-radius: 40px;
+            border-top-left-radius: 40px;
+        }
+
+
+
+
+        footer{
+            display: flex;
+            align-items: center;
+            place-items: center;
+            justify-content: center;
+            width: 100vw;
+            padding: 20px;
+            margin: 0;
+            border: none;
+            background-color: #000005;
+            left: 0;
+            bottom: 0;
+            color: white;
+        }
+        footer a{
+            color: white;
+            text-decoration: none;
+        }
+        #van{
+            display: flex;
+            align-items: center;
+            place-items: center;
+            justify-content: center;
+            
+            margin-bottom: 50px;
+            border-bottom:1px solid #ffffff2d;
+        }
+        
+        #van ul{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            padding-right: 20px;
+        }
+
+        #van ul li{
+            display: inline-block;
+            line-height: 80px;
+        }
+        #van ul li a{
+            padding: 0 15px;
+            display: block;
+        }
+        #pie2{
+            display: flex;
+        }
+        #pie2 ul li{
+            display: inline-block;
+        }
+        #pie2 h6{
+            font-size: 15px;
+            font-weight: 200;
+            margin-right: 300px;
+            
+        }
+        #pie2 img{
+            width: 35px;
+            height: 35px;
+            background-color: white;
+            border-radius: 40px;
+            margin-left: 20px;
+        }
+        #ul2{
+            margin-left: 200px;
+        }
+        
+
+        .container{
+            overflow-x: hidden;
+            position: relative;
+        }
+        #boton{
+            background-color: #000005;
+            color: #fff;
+            padding: 1px 20px;
+            height: 50px;
+            align-items: center;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+
+        .servicios{
+            background-color: #02020e;
+            margin-top: 300px;
+            display: grid;
+            align-items: center;
+            place-items: center;
+            justify-content: center;
+            padding: 60px 20px;
+        }
+        .servicios2{
+            display: flex;
+            margin: 10px 40px;
+            margin-right: 80px;
+        }
+        .servicios h3{
+            color:#fff;
+            font-size: 40px;
+        }
+
+        .numbers{
+            display: flex;
+            justify-content: center;
+            font-size: 100px;
+        }
+
+        .red{
+            color: red;
+            font-weight: 900;
+        }
+        .white{
+            font-weight: 400;
+        }
+        .servi{
+            background-color: #fff;
+            border-radius: 10px;
+            font-size: 18px;
+            margin: 20px;
+            padding: 60px 40px;
+        }
+        .servi p{
+            margin-top: 15px;
+            margin-bottom: 45px;
+        }
+        .about_icon{
+            margin-bottom: 30px;
+            width: 40px;
+            height: 40px;
+        }
+        .servi a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="cabecera">
+            <div id="logo">
+                <img id="logo_lazye" src="img/logogirasol.png" alt="lazye_logo">
+                <span id="nombre_logo">DINÁMICAS GIRASOL</span>
+            
+            </div>
+            
+            
+            <nav id="nav">
+                <ul>
+                    <li><a href="#father">Inicio</a></li>
+                    <li><a href="#servicios">Premios</a></li>
+                    <li><a href="#primary">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div id="father">
+        <div id="hijo_text">
+            <h1>Participa y Gana con Dinámicas Girasol</h1>
+            <h6>¡Tú suerte es HOY!</h6>
+        </div>
+        <div id="hijo_img"><img src="img/f1.jpg" alt="lazye_feliz" width="300px" height="240px"></div>
+    </div>
+    <div id="boton_unirme">
+        <a id="Unirme" href="https://chat.whatsapp.com/CANtdZOTdoZFG5XvkHxDQ0?mode=r_c">Unirme al Grupo</a>
+    </div>
+    
+    
+    <div id="first">
+        <h1>Pasos para Participar</h1>
+        <div id="second">
+            <div id="second1">
+                <ul>
+                    <li>
+                        <h3>1. Únete al Grupo de WhatsApp</h3>
+                        <p>Haz clic en el botón "Unirme al Grupo" o accede desde cualquiera de nuestras páginas oficiales.</p>
+                    </li>
+                    <li>
+                        <h3>2. Elige tus números disponibles</h3>
+                        <p>En el grupo compartimos una tabla actualizada con los números disponibles. Escoge los tuyos y realiza el pago.</p>
+                    </li>
+                    <li>
+                        <h3>3. Comparte tu comprobante de Pago</h3>
+                        <p>Puedes pagar tus números a través de Nequi o Daviplata. Luego, envíanos el comprobante junto con los números que seleccionaste.</p>
+                   
+                    </li>
+                    <li>
+                        <h3>4. Espera los resultados y ¡mucha suerte!</h3>
+                        <p>Tan pronto salgan los resultados de la lotería, informaremos quiénes fueron los afortunados ganadores.</p>
+                    </li>
+                </ul>
+            </div>
+            <div id="second2">
+                <img src="img/a1.jpeg" alt="cel_app">
+            </div>
+        </div>
+    </div>
+        
+<section class="servicios" id="servicios">
+        <h3>¡Conoce nuestros Múltiples Premios!</h3>
+    <div class="servicios2">
+        <div class="servi">
+            <img src="icons/money.svg" alt="Icon" class="about_icon">
+            <div class="numbers">
+                <h6 class="white">12</h6>
+                <h6 class="red">34</h6>
+            </div>
+            <p>🎯 Si aciertas las <strong>últimas 2 cifras</strong> del número ganador, ganas <strong>$100.000</strong>.</p>
+        </div>
+        <div class="servi">
+            <img src="icons/money.svg" alt="Icon" class="about_icon">
+            <div class="numbers">
+                <h6 class="white">1</h6>
+                <h6 class="red">23</h6>
+                <h6 class="white">4</h6>
+            </div>
+            <p>🎯 Si aciertas las <strong>2 cifras del medio</strong>, ganas <strong>$20.000</strong>.</p>
+        </div>
+        <div class="servi">
+            <img src="icons/money.svg" alt="Icon" class="about_icon">
+            <div class="numbers">
+                <h6 class="red">12</h6>
+                <h6 class="white">34</h6>
+            </div>
+            <p>🎯 Si aciertas las <strong>primeras 2 cifras</strong>, ganas <strong>$20.000</strong>.</p>
+        </div>
+        
+    </div>
+    <div class="servicios2">
+        <div class="servi" style="width: 300px;">
+            <img src="icons/money.svg" alt="Icon" class="about_icon">
+            <div class="numbers">
+                <h6 class="red">1</h6>
+                <h6 class="white">23</h6>
+                <h6 class="red">4</h6>
+            </div>
+            <p>🎯 Si aciertas la <strong>primera y la última cifra</strong>, ganas <strong>3 números gratis</strong> para la siguiente dinámica.</p>
+        </div>
+    </div>
+    
+</section>
+    
+
+
+    <div id="primary">
+        <div id="secundary1">
+            <h2>¡Sé uno de los Muchos Ganadores!</h2>
+            <p>¡Entra a Nuestro Grupo de WhatsApp y empieza a Ganar con Dinámicas Girasol!</p>
+            <p id="consigue">Nuestras Redes Sociales</p>
+            <a href="https://www.facebook.com/share/1BhYijSfD3/"><img src="img/face2.png" alt="Google Play"></a>
+            <a href="https://www.instagram.com/girasoldinamicas"><img src="img/insta.png" alt="App Store"></a>
+        </div>
+            <img id=img2 src="img/a3.jpeg" alt="cel1">
+            <img id="img1" src="img/a4.jpeg" alt="cel2">
+    </div>
+
+    <footer>
+        <div>
+            <nav id="van">
+                <ul>
+                    
+                </ul>
+            </nav>
+            <div id="pie2">
+                <h6>@ 2025 Dinámicas Girasol. Todos los derechos reservados.</h6>
+                <ul id="ul2">
+                    <li><a href="https://www.instagram.com/girasoldinamicas"><img src="img/insta.png" alt="Instagram"></a></li>
+                    <li><a href="https://www.facebook.com/share/1BhYijSfD3/"><img src="img/face2.png" alt="Facebook"></a></li>
+                </ul>
+            </div>
+            
+        </div>
+    </footer>
+</body>
+</html>
