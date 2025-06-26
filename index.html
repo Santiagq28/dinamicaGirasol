@@ -3,10 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Dinámicas Girasol</title>
     <link rel="shortcut icon" href="img/logogirasol.png" type="image/x-icon">
     <style>
+
+        html {
+            overflow-x: hidden;  /* Bloquea scroll horizontal */
+            width: 100%;
+        }
+
+        body {
+            overflow-x: hidden;  /* Bloquea scroll horizontal */
+            width: 100%;
+            max-width: 100vw;   /* Usa el ancho total del viewport sin excederlo */
+            position: relative;
+        }
+
+        * {
+            box-sizing: border-box; /* Evita que padding/margin causen overflow */
+            max-width: 100%;       /* Ningún elemento superará el ancho del contenedor */
+        }
+
         *{
             margin: 0;
             padding: 0;
