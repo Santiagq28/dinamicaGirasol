@@ -17,18 +17,16 @@
             overflow-x: hidden;  /* Bloquea scroll horizontal */
             width: 100%;
             max-width: 100vw;   /* Usa el ancho total del viewport sin excederlo */
-            position: relative;
         }
 
         * {
             box-sizing: border-box; /* Evita que padding/margin causen overflow */
             max-width: 100%;       /* Ningún elemento superará el ancho del contenedor */
-        }
-
-        *{
             margin: 0;
             padding: 0;
         }
+
+        
         body{
             background-color:white;
             font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -40,8 +38,8 @@
             justify-content: space-between;
             align-items: center;
             width: 100%;
-            padding: 10px;
-            margin: 0px;
+            padding: 0.5rem;
+            margin: 0;
             border-bottom: 1px solid #b1b0b0;
             background-color: white;
             height: auto;
@@ -51,38 +49,34 @@
             display: flex;
         }
         #logo_lazye{
-            width: 40px;
-            height: 40px;
+            width: 2.5rem;
+            height: 2.5rem;
         }
         #nombre_logo{
             display: block;
             font-weight: 750;
-            font-size: 20px;
-            margin-top: 5px;
-            padding-left: 5px ;
-        }
-        #nav{
-            margin-right: 50px;
+            font-size: 1.25rem;
+            margin-top: 0.25rem;
+            padding-left: 0.25rem ;
         }
 
         #nav ul{
             margin: 0;
             padding: 0;
             list-style: none;
-            padding-right: 20px;
-            padding-left: 150px;
+            padding-right: 1rem;
         }
         #nav ul li{
             display: inline-block;
-            line-height: 20px;
+            line-height: 1rem;
         }
         #nav ul li a {
             display: block;
-            padding: 0 15px;
+            padding: 0 1rem;
             text-decoration: none;
             color: black;
-            font-size: 18px;
-            margin-top: 3px;
+            font-size: 1.1rem;
+            margin-top: 0.25rem;
             font-weight: 600;
         }
         #nav ul li a:hover{
@@ -130,7 +124,7 @@
             
         }
 
-        #boton_unirme{
+        #unirme2{
             display: flex;
             justify-content: center;
         }
@@ -150,6 +144,11 @@
             color: orange;
             border: orange 2px solid;
         }
+
+        #unirme1{
+            display: none;
+        }
+        
 
 
 
@@ -305,37 +304,36 @@
             margin-left: 200px;
         }
         
-
-        .container{
-            overflow-x: hidden;
-            position: relative;
-        }
         
 
 
         .servicios{
             background-color: #02020e;
-            margin-top: 300px;
+            margin-top: 20rem;
             display: grid;
             align-items: center;
             place-items: center;
-            justify-content: center;
-            padding: 60px 20px;
+            padding: 2.5rem 2rem;
+            width: 100vw;
+            height: auto;
+            
         }
         .servicios2{
             display: flex;
-            margin: 10px 40px;
-            margin-right: 80px;
-        }
-        .servicios h3{
-            color:#fff;
-            font-size: 40px;
+            justify-content: center;
+            align-items: stretch;
+            margin: 1rem 0rem;
+            gap: 1rem;
         }
 
         .numbers{
             display: flex;
             justify-content: center;
-            font-size: 100px;
+            font-size: 6.1rem;
+        }
+        .servicios h3{
+            font-size: 4rem;
+            color: white;
         }
 
         .red{
@@ -346,20 +344,25 @@
             font-weight: 400;
         }
         .servi{
+            flex: 1;
             background-color: #fff;
             border-radius: 10px;
             font-size: 18px;
-            margin: 20px;
-            padding: 60px 40px;
+            margin: 0rem 1rem;
+            padding: 2rem 1rem;
+            width: 30%;
+            display: grid;
+            gap: 0rem;
+            max-width: 24rem;
         }
         .servi p{
-            margin-top: 15px;
-            margin-bottom: 45px;
+            margin-top: 1.5rem;
+            padding-bottom: 5rem;
         }
         .about_icon{
-            margin-bottom: 30px;
-            width: 40px;
-            height: 40px;
+            margin-bottom: 0rem;
+            width: 3rem;
+            height: 3rem;
         }
         .servi a{
             text-decoration: none;
@@ -368,9 +371,7 @@
 
 
         @media (max-width: 1024px) {
-            #nav ul {
-            padding-left: 50px;
-            }
+            
             #hijo_text {
             font-size: 30px;
             width: 90%;
@@ -413,17 +414,9 @@
             height: auto;
             margin: 20px auto;
             }
-            #cabecera {
-            flex-direction: column;
-            height: auto;
-            text-align: center;
-            }
+            
             #nav {
             margin-right: 0;
-            }
-            #nav ul li {
-            display: block;
-            line-height: 40px;
             }
         }
         @media (max-width: 768px) {
@@ -473,6 +466,7 @@
                 align-items: center;
                 justify-content: center;
             }
+            
         }
 
         @media (max-width: 800px) {
@@ -526,6 +520,13 @@
             #first{
                 margin-right: 5%;
             }
+            #unirme1{
+                display: flex;
+                justify-content: center;
+            }
+            #unirme2{
+                display: none;
+            }
         }
     </style>
 </head>
@@ -553,10 +554,13 @@
         <div id="hijo_text">
             <h1>Participa y Gana con Dinámicas Girasol</h1>
             <h6>¡Tú suerte es HOY!</h6>
+            <div id="unirme1">
+                <a id="Unirme"  href="https://chat.whatsapp.com/CANtdZOTdoZFG5XvkHxDQ0?mode=r_c">Unirme al Grupo</a>
+            </div>
         </div>
         <div id="hijo_img"><img src="img/f1.jpg" alt="lazye_feliz" width="300px" height="240px"></div>
     </div>
-    <div id="boton_unirme">
+    <div id="unirme2">
         <a id="Unirme" href="https://chat.whatsapp.com/CANtdZOTdoZFG5XvkHxDQ0?mode=r_c">Unirme al Grupo</a>
     </div>
     
@@ -622,7 +626,7 @@
         
     </div>
     <div class="servicios2">
-        <div class="servi" style="width: 300px;">
+        <div class="servi">
             <img src="icons/money.svg" alt="Icon" class="about_icon">
             <div class="numbers">
                 <h6 class="red">1</h6>
