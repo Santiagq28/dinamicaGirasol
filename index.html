@@ -3,525 +3,391 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dinámicas Girasol</title>
     <link rel="shortcut icon" href="img/logogirasol.png" type="image/x-icon">
     <style>
-
-        html {
-            overflow-x: hidden;  /* Bloquea scroll horizontal */
+        html, body {
+            overflow-x: hidden;
             width: 100%;
-        }
-
-        body {
-            overflow-x: hidden;  /* Bloquea scroll horizontal */
-            width: 100%;
-            max-width: 100vw;   /* Usa el ancho total del viewport sin excederlo */
-        }
-
-        * {
-            box-sizing: border-box; /* Evita que padding/margin causen overflow */
-            max-width: 100%;       /* Ningún elemento superará el ancho del contenedor */
+            max-width: 100%;
             margin: 0;
             padding: 0;
         }
 
-        
-        body{
-            background-color:white;
-            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            display: grid;
-            
+        * {
+            box-sizing: border-box;
+            max-width: 100%;
+            margin: 0;
+            padding: 0;
         }
-        #cabecera{
+
+        body {
+            background-color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: grid;
+        }
+
+        /* CABECERA */
+
+        #cabecera {
             display: flex;
             justify-content: space-between;
             align-items: center;
             width: 100%;
             padding: 0.5rem;
-            margin: 0;
             border-bottom: 1px solid #b1b0b0;
             background-color: white;
-            height: auto;
-            
         }
-        #logo{
+
+        #logo {
             display: flex;
+            align-items: center;
         }
-        #logo_lazye{
+
+        #logo_lazye {
             width: 2.5rem;
             height: 2.5rem;
         }
-        #nombre_logo{
-            display: block;
+
+        #nombre_logo {
             font-weight: 750;
             font-size: 1.25rem;
-            margin-top: 0.25rem;
-            padding-left: 0.25rem ;
+            margin-left: 0.25rem;
         }
 
-        #nav ul{
-            margin: 0;
-            padding: 0;
+        /* NAV */
+
+        #nav ul {
             list-style: none;
+            display: flex;
+            gap: 1rem;
             padding-right: 1rem;
         }
-        #nav ul li{
-            display: inline-block;
-            line-height: 1rem;
-        }
+
         #nav ul li a {
-            display: block;
-            padding: 0 1rem;
             text-decoration: none;
             color: black;
             font-size: 1.1rem;
-            margin-top: 0.25rem;
             font-weight: 600;
         }
-        #nav ul li a:hover{
-            color:orange;
-            transition-duration: 300ms
+
+        #nav ul li a:hover {
+            color: orange;
+            transition: 300ms;
         }
 
-        
+        /* SECCIÓN PRINCIPAL */
 
-        
-        #father{
+        #father {
             display: flex;
             align-items: center;
             justify-content: center;
+            flex-wrap: wrap;
+            padding: 20px;
         }
-        #hijo_text{
-            margin: 1.25rem;
+
+        #hijo_text {
             font-size: 3vw;
             max-width: 600px;
+            text-align: center;
         }
-        #hijo_text h6{
+
+        #hijo_text h6 {
             margin-top: 1.25rem;
             font-size: 1.875rem;
             font-weight: 400;
         }
-        #hijo_img{
+
+        #hijo_img {
             background-color: #fff7008b;
-            padding-top: 5.625rem;
-            padding-right: 9.375rem;
-            padding-bottom: 3.125rem;
-            border-bottom-left-radius: 50%;
-            border-bottom-right-radius: 50%;
-            border-top-left-radius: 40%;
-            margin-left: 1.5625rem;
-            
-            
+            padding: 3rem;
+            border-radius: 50% 50% 40% 40%;
+            margin-top: 1rem;
+            text-align: center;
         }
-        #hijo_img img{
+
+        #hijo_img img {
             width: 100%;
             height: auto;
             transform: rotate(-8deg);
             border-radius: 10px;
-            display: block;
-            
         }
 
-        #unirme2{
+        /* BOTÓN UNIRME */
+
+        #unirme1{
             display: flex;
             justify-content: center;
+            margin-top: 1rem;
         }
 
-        #Unirme{
+        #Unirme {
             text-decoration: none;
             background-color: orange;
             font-size: 4vw;
             font-weight: 700;
-            padding: 0.125rem 1.5625rem;
+            padding: 0.5rem 1.5rem;
             border-radius: 5px;
             color: white;
+            text-align: center;
         }
-        #Unirme:hover{
-            transition-duration: 700ms;
+
+        #Unirme:hover {
+            transition: 700ms;
             background-color: white;
             color: orange;
-            border: orange 2px solid;
+            border: 2px solid orange;
         }
 
-        #unirme1{
-            display: none;
-        }
-        
+        /* PASOS */
 
-
-
-
-        #first{
+        #first {
             display: grid;
-            align-items: center;
-            justify-content:center;
-            margin-top: 15.625rem;
-            
+            justify-content: center;
+            margin: 10rem 1rem;
+            text-align: center;
         }
-        #first h1{
+
+        #first h1 {
             font-size: 2.5rem;
             margin-bottom: 2.5rem;
         }
-        #second{
+
+        #second {
             display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
         }
-        #second1{
-            margin-top: 3.125rem;
-            margin-left: 3.125rem;
-            width: 37.5rem;
+
+        #second1 {
+            max-width: 600px;
             font-size: 1.125rem;
-            
         }
-        #second ul{
+
+        #second1 li {
+            margin-top: 2rem;
             list-style: none;
         }
-        #second1 li{
-            margin-top: 2.5rem;
+
+        #second1 li p {
+            margin-top: 0.5rem;
         }
-        #second1 li p{
-            margin-top: 1rem;
-        }
-        #second2 img{
-            width: 70%;
+
+        #second2 img {
+            width: 100%;
             height: auto;
-            margin-left: 9.375rem;
             border-radius: 1.875rem;
-            display: block;
         }
 
+        /* SERVICIOS */
 
-        #primary{
-            display: flex;
-            margin-top: 15.625rem;
-            background-color: orange;
-            align-items: center;
-            justify-content:center;
-            padding: 0 6rem;
-        }
-        #secundary1{
-            width: 100%;
-            font-size: 1.875rem;
-        }
-        #secundary1 h2{
-            margin-top: 4.375rem;
-            margin-bottom: 1.25rem;
-        }
-        #secundary1 p{
-            font-size: 1.125rem;
-            font-weight: 500;
-        }
-        #secundary1 img{
-            width: 1.875rem;
-            height: 1.875rem;
-            margin-top: 0.625rem;
-            border-radius: 0.625rem;
-        }
-        #consigue{
-            margin-top: 2.5rem;
-        }
-        #img2{
-            width: 16%;
-            height: auto;
-            margin-left: 4.375rem;
-            border-bottom-left-radius: 2.5rem;
-            border-bottom-right-radius: 2.5rem;
-            margin-bottom: 6.25rem;
-        }
-        #img1{
-            width: 16%;
-            height: auto;
-            margin-top: 5rem;
-            margin-left: 3.125rem;
-            border-top-right-radius: 2.5rem;
-            border-top-left-radius: 2.5rem;
-        }
-
-
-
-
-        footer{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            padding: 1.25rem;
-            margin: 0;
-            border: none;
-            background-color: #000005;
-            left: 0;
-            bottom: 0;
-            color: white;
-        }
-        footer a{
-            color: white;
-            text-decoration: none;
-        }
-        #van{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            
-            margin-bottom: 3.125rem;
-            border-bottom: 1px solid #ffffff2d;
-        }
-        
-        #van ul{
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            padding-right: 1.25rem;
-        }
-
-        #van ul li{
-            display: inline-block;
-            line-height: 5rem;
-        }
-        #van ul li a{
-            padding: 0 1rem;
-            display: block;
-        }
-        #pie2{
-            display: flex;
-        }
-        #pie2 ul li{
-            display: inline-block;
-        }
-        #pie2 h6{
-            font-size: 1rem;
-            font-weight: 200;
-            margin-right: 18.75rem;
-            
-        }
-        #pie2 img{
-            width: 2.1875rem;
-            height: 2.1875rem;
-            background-color: white;
-            border-radius: 2.5rem;
-            margin-left: 1.25rem;
-        }
-        
-        
-
-
-        .servicios{
+        .servicios {
             background-color: #02020e;
-            margin-top: 20rem;
-            display: grid;
-            align-items: center;
-            place-items: center;
-            padding: 2.5rem 2rem;
-            width: 100vw;
-            height: auto;
-            
+            margin-top: 10rem;
+            padding: 5rem 1rem 12rem 1rem;
+            text-align: center;
+            width: 100%;
         }
-        .servicios2{
+
+        .servicios h3 {
+            font-size: 3rem;
+            color: white;
+            margin-bottom: 2rem;
+        }
+
+        .servicios2 {
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
-            align-items: stretch;
-            margin: 1rem 0rem;
             gap: 1rem;
         }
 
-        .numbers{
-            display: flex;
-            justify-content: center;
-            font-size: 6.1rem;
-        }
-        .servicios h3{
-            font-size: 4rem;
-            color: white;
+        .servi {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem 1rem;
+            max-width: 300px;
+            text-align: center;
+            font-size: 18px;
+            margin-top: 1rem;
         }
 
-        .red{
-            color: red;
-            font-weight: 900;
+        .servi p {
+            margin-top: 1rem;
         }
-        .white{
-            font-weight: 400;
-        }
-        .servi{
-            flex: 1;
-            background-color: #fff;
-            border-radius: 10px;
-            font-size: 18px;
-            margin: 0rem 1rem;
-            padding: 2rem 1rem;
-            width: 30%;
-            display: grid;
-            gap: 0rem;
-            max-width: 24rem;
-        }
-        .servi p{
-            margin-top: 1.5rem;
-            padding-bottom: 5rem;
-        }
-        .about_icon{
-            margin-bottom: 0rem;
+
+        .about_icon {
             width: 3rem;
             height: 3rem;
         }
-        .servi a{
-            text-decoration: none;
+
+        .numbers {
+            display: flex;
+            justify-content: center;
+            font-size: 3rem;
+            gap: 0.5rem;
+            margin: 1rem 0;
         }
 
+        .red {
+            color: red;
+            font-weight: 900;
+        }
 
+        .white {
+            font-weight: 400;
+        }
+
+        /* CONTACTO */
+
+        #primary {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            background-color: orange;
+            padding: 1rem 1rem;
+            gap: 2rem;
+            text-align: center;
+        }
+
+        #secundary1 {
+            max-width: 600px;
+        }
+
+        #secundary1 h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        #secundary1 p {
+            font-size: 1.125rem;
+            font-weight: 500;
+        }
+
+        #secundary1 img {
+            width: 2rem;
+            height: 2rem;
+            margin: 0.5rem;
+            border-radius: 0.5rem;
+        }
+
+        #consigue{
+            margin-top: 2rem;
+        }
+
+        #img1, #img2 {
+            width: 80%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 2rem;
+        }
+
+        /* FOOTER */
+
+        footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #000005;
+            padding: 1.5rem;
+            color: white;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+
+        #pie2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        #pie2 h6 {
+            font-size: 1rem;
+            font-weight: 200;
+        }
+
+        #pie2 img {
+            width: 2rem;
+            height: 2rem;
+            background-color: white;
+            border-radius: 2rem;
+        }
+
+        /* MEDIA QUERIES */
 
         @media (max-width: 1024px) {
-            
             #hijo_text {
-            font-size: 30px;
-            width: 90%;
-            text-align: center;
-            }
-            #hijo_img img {
-            width: 300px;
-            height: auto;
-            }
-            #second {
-            flex-direction: column;
-            align-items: center;
-            }
-            #second1, #second2 {
-            width: 100%;
-            margin: 20px auto;
-            }
-            #second2 img {
-            width: 100%;
-            height: auto;
-            margin: 0;
-            }
-            .servicios2 {
-            flex-direction: column;
-            align-items: center;
-            }
-            .servi {
-            width: 90% !important;
-            }
-            #primary {
-            flex-direction: column;
-            padding: 20px;
-            text-align: center;
-            }
-            #secundary1 {
-            width: 100%;
-            }
-            #img1, #img2 {
-            width: 80%;
-            height: auto;
-            margin: 20px auto;
-            }
-            
-            #nav {
-            margin-right: 0;
-            }
-        }
-        @media (max-width: 768px) {
-            #nav ul {
-                padding-left: 0;
-            }
-            #second2 img {
-                margin-left: 0;
-            }
-        }
-
-        @media (max-width: 600px) {
-            #Unirme {
                 font-size: 30px;
                 width: 90%;
-                text-align: center;
             }
-            #nombre_logo {
-            font-size: 16px;
-            }
-            #logo_lazye {
-            width: 30px;
-            height: 30px;
-            }
-            .servicios h3 {
-            font-size: 28px;
-            text-align: center;
-            }
-            #first h1 {
-            font-size: 30px;
-            }
-            #secundary1 h2 {
-            font-size: 24px;
-            }
-            nav{
-                display: none;
-            }
-            #cabecera{
-                width: 100%;
-            }
-            #ul2{
-                display: none;
-            }
-            footer{
-                width: 100%;
-                display: flex;
+
+            #second {
+                flex-direction: column;
                 align-items: center;
-                justify-content: center;
             }
-            
+
+            .servi {
+                width: 90%;
+            }
+
+            #img1, #img2 {
+                width: 90%;
+                margin: auto;
+            }
         }
 
-        @media (max-width: 800px) {
-            body{
-                width: 100%;
-            }
-            #father {
-                flex-direction: column;
-                padding: 20px;
-                text-align: center;
-                margin-right: 5%;
+        @media (max-width: 768px) {
+            #nombre_logo {
+                font-size: 16px;
             }
 
-            #hijo_text {
-                font-size: 24px;
-                width: 100%;
-                margin: 0;
+            #logo_lazye {
+                width: 30px;
+                height: 30px;
             }
 
-            #hijo_text h1 {
+            nav {
+                display: none;
+            }
+
+            .servicios h3 {
                 font-size: 28px;
             }
 
-            #hijo_text h6 {
-                font-size: 18px;
+            #first h1 {
+                font-size: 30px;
             }
 
-            #hijo_img {
-                padding: 30px;
-                margin: 8rem 0 auto auto;
-            }
-
-            #hijo_img img {
-                width: 80%;
-                height: auto;
-                margin: 0 auto;
+            #secundary1 h2 {
+                font-size: 24px;
             }
 
             #Unirme {
-                font-size: 20px;
+                font-size: 30px;
+                width: 90%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .numbers {
+                font-size: 2rem;
+            }
+
+            #Unirme {
+                font-size: 22px;
                 padding: 10px 20px;
             }
 
-            #father{
-                margin:0 5%;
-            }
-            #first{
-                margin:0 5%;
-            }
-            #unirme1{
-                display: flex;
-                justify-content: center;
-                margin-top: 1rem;
-            }
-            #unirme2{
-                display: none;
+            #hijo_img {
+                padding: 2rem;
             }
         }
+
     </style>
 </head>
 <body>
@@ -553,9 +419,6 @@
             </div>
         </div>
         <div id="hijo_img"><img src="img/f1.jpg" alt="lazye_feliz" width="300px" height="240px"></div>
-    </div>
-    <div id="unirme2">
-        <a id="Unirme" href="https://chat.whatsapp.com/CANtdZOTdoZFG5XvkHxDQ0?mode=r_c">Unirme al Grupo</a>
     </div>
     
     
@@ -617,9 +480,6 @@
             </div>
             <p>🎯 Si aciertas las <strong>primeras 2 cifras</strong>, ganas <strong>$20.000</strong>.</p>
         </div>
-        
-    </div>
-    <div class="servicios2">
         <div class="servi">
             <img src="icons/money.svg" alt="Icon" class="about_icon">
             <div class="numbers">
@@ -629,6 +489,7 @@
             </div>
             <p>🎯 Si aciertas la <strong>primera y la última cifra</strong>, ganas <strong>3 números gratis</strong> para la siguiente dinámica.</p>
         </div>
+        
     </div>
     
 </section>
@@ -656,10 +517,6 @@
             </nav>
             <div id="pie2">
                 <h6>@ 2025 Dinámicas Girasol. Todos los derechos reservados.</h6>
-                <ul id="ul2">
-                    <li><a href="https://www.instagram.com/girasoldinamicas"><img src="img/insta.png" alt="Instagram"></a></li>
-                    <li><a href="https://www.facebook.com/share/1BhYijSfD3/"><img src="img/face2.png" alt="Facebook"></a></li>
-                </ul>
             </div>
             
         </div>
