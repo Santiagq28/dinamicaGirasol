@@ -88,7 +88,7 @@
         }
 
         #hijo_text {
-            font-size: 3vw;
+            font-size: 2.5vw;
             max-width: 600px;
             text-align: center;
         }
@@ -117,8 +117,10 @@
         /* BOTÓN UNIRME */
 
         #unirme1{
-            display: flex;
+            display: grid;
+            gap: 1rem;
             justify-content: center;
+            align-items: center;
             margin-top: 1rem;
         }
 
@@ -139,12 +141,37 @@
             width: 9%;
             height: auto;
         }
-
+        
         #Unirme:hover {
             transition: 700ms;
             background-color: #ffa600ba;
             color: white;
         }
+        #Boleta{
+            text-decoration: none;
+            background-color: #ffdd00;
+            font-size: 4vw;
+            font-weight: 700;
+            padding: 0.5rem 1.5rem;
+            border-radius: 2rem;
+            color: white;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+        #Boleta img{
+            width: 9%;
+            height: auto;
+        }
+        
+        #Boleta:hover {
+            transition: 700ms;
+            background-color: #ecfd03;
+            color: white;
+        }
+
+       
 
         /* PASOS */
 
@@ -381,6 +408,13 @@
                 font-size: 30px;
                 width: 90%;
             }
+            #Boleta{
+                font-size: 30px;
+                width: 90%;
+            }
+            #hijo_img{
+                margin-top: 5rem;
+            }
         }
 
         @media (max-width: 480px) {
@@ -392,8 +426,13 @@
                 font-size: 22px;
                 padding: 10px 20px;
             }
+            #Boleta {
+                font-size: 22px;
+                padding: 10px 20px;
+            }
 
             #hijo_img {
+                margin: 2rem 0rem;
                 padding: 2rem;
             }
         }
@@ -428,6 +467,10 @@
                 <a id="Unirme"  href="https://chat.whatsapp.com/CANtdZOTdoZFG5XvkHxDQ0?mode=r_c">
                     Unirme al Grupo
                     <img src="icons/whatsapp2.svg" alt="">
+                </a>
+                <a id="Boleta" href="https://superrifadigital.com.br/es-CO/KVdoq8Dqm0la?u=40303">
+                    Comprar Boleta
+                    <img src="icons/ticket.svg" alt="">
                 </a>
             </div>
         </div>
